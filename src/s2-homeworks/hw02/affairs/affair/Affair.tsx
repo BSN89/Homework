@@ -17,10 +17,10 @@ function Affair(props: AffairPropsType) {
     const affairClass = s.affair + ' ' + s2[props.affair.priority]
 
     return (
-        <div id={'hw2-affair-' + props.affair._id} className={affairClass}>
-            <div id={'hw2-name-' + props.affair.name} className={nameClass}></div>
+        <div id={'hw2-affair-' + props.affair.priority} className={affairClass}>
+            <div id={'hw2-name-' + props.affair.priority} className={nameClass}></div>
             <div id={'hw2-priority-' + props.affair.priority} hidden>{props.affair.priority}</div>
-            <button id={'hw2-button-delete-' + props.affair._id} className={buttonClass} onClick={deleteCallback}>DEL</button>
+            <button onClick={deleteCallback} id={'hw2-button-delete-' + props.affair.priority} className={buttonClass} >DEL</button>
         </div>
     )
 }
